@@ -10,6 +10,7 @@ body {
   width: 100%;
   height: calc(100% - 50px);
   z-index: 2;
+  pointer-events: none;
 }
 
 #navbar {
@@ -27,18 +28,38 @@ body {
 
 #navbar li {
   margin-bottom: 10px;
+  position: relative;
 }
 
 #navbar a {
   display: block;
   padding: 10px;
-  background-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.8);
   color: #000000;
   text-decoration: none;
   border-radius: 5px;
+  position: relative;
+  z-index: 1;
+}
+
+#navbar a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 5px;
+  z-index: -1;
 }
 
 #navbar a:hover {
-  background-color: rgb(254, 254, 254)fff;
-  color: rgb(255, 118, 150);
+  color: #ffffff;
+}
+
+#navbar a:hover::before {
+  opacity: 1;
 }

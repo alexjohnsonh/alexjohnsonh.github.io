@@ -25,7 +25,8 @@ function setup() {
       }
     } while (isOverlapping);
     
-    balls.push(new Ball(x, y, r, colors[i]));
+    let ball = new Ball(x, y, r, colors[i]);
+    balls.push(ball);
   }
 }
 
@@ -36,6 +37,7 @@ function draw() {
     b.update();
     b.display();
     b.checkBoundaryCollision();
+    b.checkHover();
   }
   
   for (let i = 0; i < balls.length; i++) {
@@ -48,7 +50,7 @@ function draw() {
 function mousePressed() {
   for (let i = 0; i < balls.length; i++) {
     let b = balls[i];
-    if (b.checkHover()) {
+    if (b.isHovered) {
       window.location.href = texts[i];
       break;
     }
@@ -63,10 +65,18 @@ class Ball {
     this.r = r;
     this.m = r * 0.1;
     this.color = color;
+    this.isHovered = false;
+    this.vibrationOffset = createVector(0, 0);
   }
 
   update() {
     this.position.add(this.velocity);
+    
+    if (this.isHovered) {
+      this.vibrate();
+    } else {
+      this.vibrationOffset.mult(0);
+    }
   }
 
   checkBoundaryCollision() {
@@ -140,12 +150,20 @@ class Ball {
   
   checkHover() {
     let d = dist(mouseX, mouseY, this.position.x, this.position.y);
-    return d < this.r;
+    this.isHovered = d < this.r;
+  }
+  
+  vibrate() {
+    this.vibrationOffset = p5.Vector.random2D();
+    this.vibrationOffset.mult(3);
   }
   
   display() {
+    push();
+    translate(this.vibrationOffset.x, this.vibrationOffset.y);
     noStroke();
     fill(this.color);
     ellipse(this.position.x, this.position.y, this.r * 2, this.r * 2);
+    pop();
   }
 }
