@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+    background-color: #FF0000;
+  }
+  
+  #navbar {
+    position: absolute;
+    top: 80px;
+    left: 80px;
+    z-index: 1;
+  }
+  
+  #navbar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  #navbar li {
+    margin-bottom: 10px;
+  }
+  
+  #navbar a {
+    display: block;
+    padding: 10px;
+    background-color: #FF0000;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  #navbar a:hover {
+    background-color: #ffffff;
+    color: #FF0000;
+  }
+  
+  #content {
+    margin-top: 200px;
+    padding: 20px;
+    color: #FF0000;
+  }

@@ -1,0 +1,44 @@
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+#sketch-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 50px);
+  z-index: 2;
+}
+
+#navbar {
+  position: absolute;
+  top: 80px;
+  left: 80px;
+  z-index: 1;
+}
+
+#navbar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#navbar li {
+  margin-bottom: 10px;
+}
+
+#navbar a {
+  display: block;
+  padding: 10px;
+  background-color: #ffffff;
+  color: #000000;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+#navbar a:hover {
+  background-color: rgb(254, 254, 254)fff;
+  color: rgb(255, 118, 150);
+}
