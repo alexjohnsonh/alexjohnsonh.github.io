@@ -1,5 +1,5 @@
 let balls = [];
-let colors = ['#FF0000', '#FF6800', '#FFF700', '#28E601', '#019DE6', '#4B0082', '#7F00FF'];
+let colors = ['#ED1C24', '#F15A29', '#FFF200', '#00A651', '#2E3192', '#4B0082', '#7F00FF'];
 let texts = ['red.html', 'orange.html', 'yellow.html', 'green.html', 'blue.html', 'indigo.html', 'violet.html'];
 
 function setup() {

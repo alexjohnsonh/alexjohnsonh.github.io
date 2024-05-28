@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    background-color: #019DE6;
+    background-color: #2E3192;
   }
   
   #navbar {
@@ -23,7 +23,7 @@ body {
   #navbar a {
     display: block;
     padding: 10px;
-    background-color: #019DE6;
+    background-color: #2E3192;
     color: #ffffff;
     text-decoration: none;
     border-radius: 5px;
@@ -31,11 +31,11 @@ body {
   
   #navbar a:hover {
     background-color: #ffffff;
-    color: #019DE6;
+    color: #2E3192;
   }
   
   #content {
     margin-top: 200px;
     padding: 20px;
-    color: #019DE6;
+    color: #2E3192;
   }
