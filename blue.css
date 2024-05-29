@@ -1,13 +1,30 @@
 body {
     margin: 0;
     background-color: #2E3192;
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  #container {
+    display: flex;
+    height: 100%;
+  }
+  
+  #left-section {
+    flex: 1;
+    padding: 80px;
+    box-sizing: border-box;
+    overflow-y: auto;
+  }
+  
+  #header {
+    display: flex;
+    align-items: flex-start;
   }
   
   #navbar {
-    position: absolute;
-    top: 80px;
-    left: 80px;
-    z-index: 1;
+    margin-right: 2cm;
   }
   
   #navbar ul {
@@ -35,7 +52,57 @@ body {
   }
   
   #content {
-    margin-top: 200px;
-    padding: 20px;
-    color: #2E3192;
+    flex-grow: 1;
+    box-sizing: border-box;
   }
+  
+  h1, h2 {
+    color: #ffffff;
+    margin: 0;
+    font-size: 48px;
+  }
+  
+  p {
+    color: #ffffff;
+    font-size: 18px;
+    line-height: 1.5;
+  }
+  
+  #right-section {
+    flex: 1;
+    padding: 80px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    min-height: 100vh;
+  }
+  
+  #scroll-content {
+    max-width: 100%;
+  }
+  
+  h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  #vertical-line {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 1cm;
+    height: 100vh;
+    background-color: #2E3192;
+    z-index: 0;
+  }
+  
+  #arrow {
+    position: absolute;
+    bottom: 20px;
+    right: 0.4cm;
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 10px solid #ffffff;
+  }
+  
