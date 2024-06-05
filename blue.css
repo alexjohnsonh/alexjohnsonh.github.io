@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    background-color: #2E3192;
+    background-color: #2f18fc;
     position: relative;
     height: 100vh;
     overflow: hidden;
@@ -40,7 +40,7 @@ body {
   #navbar a {
     display: block;
     padding: 10px;
-    background-color: #2E3192;
+    background-color: #2f18fc;
     color: #ffffff;
     text-decoration: none;
     border-radius: 5px;
@@ -48,7 +48,7 @@ body {
   
   #navbar a:hover {
     background-color: #ffffff;
-    color: #2E3192;
+    color: #2f18fc;
   }
   
   #content {
@@ -91,7 +91,7 @@ body {
     right: 0;
     width: 1cm;
     height: 100vh;
-    background-color: #2E3192;
+    background-color: #2f18fc;
     z-index: 0;
   }
   
@@ -104,5 +104,11 @@ body {
     border-left: 6px solid transparent;
     border-right: 6px solid transparent;
     border-top: 10px solid #ffffff;
+  }
+  #scroll-content img {
+    display: block;
+    margin: 20px auto;
+    max-width: 700px;
+    height: auto;
   }
   
