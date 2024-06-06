@@ -115,9 +115,21 @@ body {
     height: auto;
   }
 
+  #logo-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 0;
+  }
+  
+  #logo {
+    max-width: 50px;
+    height: auto;
+  }
+
   @font-face {
     font-family: Header;
-    src: url(AbrilFatface-Regular.ttf);
+    src: url(ArbutusSlab-Regular.ttf);
   }
   
   @font-face {
