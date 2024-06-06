@@ -40,6 +40,7 @@ body {
   border-radius: 5px;
   position: relative;
   z-index: 1;
+  font-family: Body;
 }
 
 #navbar a::before {
@@ -62,4 +63,14 @@ body {
 
 #navbar a:hover::before {
   opacity: 1;
+}
+
+@font-face {
+  font-family: Header;
+  src: url(AbrilFatface-Regular.ttf);
+}
+
+@font-face {
+  font-family: Body;
+  src: url(Roboto-Light.ttf);
 }
