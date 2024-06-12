@@ -2,13 +2,10 @@ body {
     margin: 0;
     background-color: #FFF200;
     position: relative;
-    height: 100vh;
-    overflow: hidden;
   }
   
   #container {
     display: flex;
-    height: 100%;
   }
   
   #left-section {
@@ -76,11 +73,16 @@ body {
     padding: 80px;
     box-sizing: border-box;
     overflow-y: auto;
-    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   
   #scroll-content {
     max-width: 100%;
+    width: 100%;
+    padding-bottom: 40px;
+    margin-bottom: 150px;
   }
   
   h2 {
@@ -106,7 +108,7 @@ body {
     height: 0;
     border-left: 6px solid transparent;
     border-right: 6px solid transparent;
-    border-top: 10px solid #010101;
+    border-top: 10px solid #000000;
   }
   #scroll-content img {
     display: block;
@@ -114,19 +116,7 @@ body {
     max-width: 700px;
     height: auto;
   }
-
-  #logo-container {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 0;
-  }
   
-  #logo {
-    max-width: 50px;
-    height: auto;
-  }
-
   @font-face {
     font-family: Header;
     src: url(ArbutusSlab-Regular.ttf);
@@ -137,3 +127,108 @@ body {
     src: url(Roboto-Light.ttf);
   }
   
+  @media screen and (max-width: 768px) {
+    #left-section, #right-section {
+      padding: 40px;
+    }
+  
+    #scroll-content {
+      margin-bottom: 200px;
+    }
+  
+    h1 {
+      font-size: 36px;
+    }
+  
+    h2 {
+      font-size: 24px;
+    }
+  
+    p {
+      font-size: 16px;
+    }
+  
+    #scroll-content {
+      max-width: 100%;
+    }
+  
+    #scroll-content img {
+      display: block;
+      margin: 20px auto;
+      width: 100%;
+      height: auto;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    #scroll-content {
+      margin-bottom: 250px;
+    }
+  }
+  
+  #home-logo {
+    width: 60px;
+    height: auto;
+    vertical-align: left;
+  }
+
+  .color-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  #circle1, #circle2, #circle3, #circle4, #circle5, #circle6, #circle7, #circle8 {
+    width: 12vw;
+    height: 12vw;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 10px;
+  }
+  
+  @media screen and (max-width: 768px) {
+    #circle1, #circle2, #circle3, #circle4, #circle5, #circle6, #circle7, #circle8 {
+      width: 15vw;
+      height: 15vw;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    #circle1, #circle2, #circle3, #circle4, #circle5, #circle6, #circle7, #circle8 {
+      width: 20vw;
+      height: 20vw;
+    }
+  }
+  
+  #circle1 {
+    background-color: #e600ff;
+  }
+  
+  #circle2 {
+    background-color: #fff200;
+    border: 3px solid #000000;
+  }
+  
+  #circle3 {
+    background-color: #99ff00;
+  }
+
+  #circle4 {
+    background-color: #ffb300;
+  }
+
+  #circle5 {
+    background-color: #ff0099;
+  }
+
+  #circle6 {
+    background-color: #6600ff;
+  }
+
+  #circle7 {
+    background-color: #ff001a;
+  }
+
+  #circle8 {
+    background-color: #0033ff;
+  }
