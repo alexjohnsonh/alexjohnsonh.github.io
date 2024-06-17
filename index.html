@@ -5,18 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>COLOUR</title>
     <link rel="icon" type="image/x-icon" href="./logos-2.png">
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.js"></script>
-    <script src="script.js"></script>
+    <link rel="stylesheet" href="intro-styles.css">
 </head>
 <body>
-  <div id="sketch-container"></div>
-  <nav id="navbar">
-    <ul>
-      <li><a href="index.html"><img src="./logos-3.png" alt="Logo" id="home-logo"></a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="science.html">Science</a></li>
-    </ul>
-  </nav>
+    <div id="intro-container">
+        <img id="intro-logo" src="./logos-2.png" alt="COLOUR Logo">
+    </div>
+    <script>
+        setTimeout(function() {
+            var introContainer = document.getElementById('intro-container');
+            var animationDuration = 3000; // Animation duration in milliseconds
+            var startTime = null;
+
+            function shrinkAnimation(timestamp) {
+                if (!startTime) startTime = timestamp;
+                var progress = timestamp - startTime;
+                var radius = Math.max(1 - progress / animationDuration, 0);
+                introContainer.style.clipPath = 'circle(' + (radius * 100) + '% at center)';
+
+                if (progress < animationDuration) {
+                    requestAnimationFrame(shrinkAnimation);
+                } else {
+                    window.location.href = 'home.html';
+                }
+            }
+
+            requestAnimationFrame(shrinkAnimation);
+        }, 7000);
+    </script>
 </body>
 </html>
