@@ -105,92 +105,66 @@ wistia-player {
     display: block;
 }
 
-/* For large screens, like a 24-inch iMac */
 @media (min-width: 1920px) {
-    #left-section {
-        padding: 60px;
+    #container {
         max-width: 75%;
+        padding: 60px; /* Adjusting padding specifically for container */
     }
 
-    h1, h2 {
+    #main-content {
         font-size: 56px;
+        padding: 0;
     }
 
     p {
         font-size: 14px;
     }
-
-    #navbar {
-        margin-right: 2.5cm;
-    }
-
-    #wistia-container {
-        max-width: 100%;
-    }
 }
 
 /* For medium screens, like a 13-inch MacBook (1280px width) */
 @media (max-width: 1280px) {
-    #left-section {
-        padding: 40px;
+    #container {
         max-width: 85%;
+        padding: 40px; /* Moderate padding to fit 13-inch screens */
     }
 
-    h1, h2 {
+    #main-content {
         font-size: 42px;
     }
 
     p {
         font-size: 13px;
     }
-
-    #navbar {
-        margin-right: 1.5cm;
-    }
 }
 
 /* For iPad screens (768px width) */
 @media (max-width: 768px) {
-    #left-section {
-        padding: 20px;
+    #container {
         max-width: 90%;
+        padding: 20px;
     }
 
-    h1, h2 {
+    #main-content {
         font-size: 36px;
     }
 
     p {
         font-size: 12px;
     }
-
-    #navbar {
-        margin-right: 1cm;
-    }
 }
 
-/* For smaller screens, like phones (375px width) */
+/* For smaller screens, like phones (480px width) */
 @media (max-width: 480px) {
-    #left-section {
-        padding: 10px;
+    #container {
         max-width: 95%;
+        padding: 10px;
     }
 
-    h1, h2 {
+    #main-content {
         font-size: 28px;
     }
 
     p {
         font-size: 11px;
-    }
-
-    #navbar {
-        margin-right: 0.5cm;
-    }
-
-    /* Stack the navbar items vertically */
-    #navbar ul {
-        display: flex;
-        flex-direction: column;
     }
 }
