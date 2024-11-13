@@ -1,51 +1,51 @@
+/* Main CSS as you provided */
 body {
     margin: 0;
     background-color: #ffffff;
     position: relative;
     height: 100vh;
     overflow: hidden;
-}
-
-#container {
+  }
+  
+  #container {
     display: flex;
     height: 100%;
-}
-
-#left-section {
+  }
+  
+  #left-section {
     flex: 1;
     padding: 80px;
-    max-width: 80%;
+    max-width: 50%;
     box-sizing: border-box;
     overflow-y: auto;
     display: flex;
     flex-direction: column;
-}
-
-#header {
+  }
+  
+  #header {
     display: flex;
     align-items: flex-start;
     position: sticky;
     top: 0;
     background-color: #ffffff;
     z-index: 1;
-}
-
-#navbar {
-    flex-shrink: 0;
+  }
+  
+  #navbar {
     margin-right: 2cm;
-}
-
-#navbar ul {
+  }
+  
+  #navbar ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
-}
-
-#navbar li {
+  }
+  
+  #navbar li {
     margin-bottom: 10px;
-}
-
-#navbar a {
+  }
+  
+  #navbar a {
     display: block;
     padding: 10px;
     background-color: #ffffff;
@@ -53,123 +53,111 @@ body {
     text-decoration: none;
     border-radius: 5px;
     font-family: Body;
-}
-
-#navbar a:hover {
+  }
+  
+  #navbar a:hover {
     background-color: #000000;
     color: #ffffff;
-}
-
-#main-content {
+  }
+  
+  #content {
     flex-grow: 1;
-}
-
-h1, h2 {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  h1, h2 {
     color: #000000;
     margin: 0;
     font-size: 48px;
     font-family: Header;
-    margin-bottom: 20px;
-}
-
-p {
+  }
+  
+  p {
     color: #000000;
-    font-size: 13px;
+    font-size: 18px;
     line-height: 1.5;
     font-family: Body;
-}
-
-h2 {
+  }
+  
+  #scroll-content {
+    overflow-y: auto;
+    padding-right: 20px;
+  }
+  
+  h2 {
     font-size: 36px;
     margin-bottom: 20px;
-}
-
-@font-face {
+  }
+  
+  @font-face {
     font-family: Header;
     src: url(ArbutusSlab-Regular.ttf);
-}
-
-@font-face {
+  }
+  
+  @font-face {
     font-family: Body;
     src: url(Roboto-Light.ttf);
-}
-
-#wistia-container {
-    width: 100%;
-    height: auto;
-    position: relative;
-}
-
-wistia-player {
-    width: 100%;
-    display: block;
-}
-
-@media (min-width: 1920px) {
-    #main-content {
-        padding-right: 40px; /* Add space only inside the content */
+  }
+  
+  #right-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  #logo {
+    max-width: 50%;
+    max-height: 50%;
+    object-fit: contain;
+  }
+  
+  /* Responsive Text and Video Container Only */
+  
+  /* For large screens, like a 24-inch iMac */
+  @media (min-width: 1920px) {
+    p {
+        font-size: 20px;
     }
-
-    h1, h2 {
-        font-size: 56px;
+  
+    #wistia-container {
+        max-width: 90%;
     }
-
+  }
+  
+  /* For medium screens, like a 13-inch MacBook */
+  @media (max-width: 1280px) {
+    p {
+        font-size: 16px;
+    }
+  
+    #wistia-container {
+        max-width: 85%;
+    }
+  }
+  
+  /* For iPad screens */
+  @media (max-width: 768px) {
     p {
         font-size: 14px;
     }
-
+  
     #wistia-container {
-        max-width: 100%;
+        max-width: 80%;
     }
-}
-
-/* For medium screens, like a 13-inch MacBook (1280px width) */
-@media (max-width: 1280px) {
-    #main-content {
-        padding-right: 30px;
-    }
-
-    h1, h2 {
-        font-size: 42px;
-    }
-
-    p {
-        font-size: 13px;
-    }
-}
-
-/* For iPad screens (768px width) */
-@media (max-width: 768px) {
-    #main-content {
-        padding-right: 20px;
-    }
-
-    h1, h2 {
-        font-size: 36px;
-    }
-
+  }
+  
+  /* For smaller screens, like phones */
+  @media (max-width: 480px) {
     p {
         font-size: 12px;
     }
-}
-
-/* For smaller screens, like phones (480px width) */
-@media (max-width: 480px) {
-    #main-content {
-        padding-right: 10px;
+  
+    #wistia-container {
+        max-width: 100%;
     }
-
-    h1, h2 {
-        font-size: 28px;
-    }
-
-    p {
-        font-size: 11px;
-    }
-
-    /* Stack navbar items vertically on small screens */
-    #navbar ul {
-        display: flex;
-        flex-direction: column;
-    }
-}
+  }

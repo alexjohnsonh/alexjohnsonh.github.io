@@ -81,26 +81,3 @@ body {
   vertical-align: left;
 }
 
-/* For large screens, like a 24-inch iMac */
-@media (min-width: 1920px) {
-  #left-section {
-      padding: 60px;
-      max-width: 75%;
-  }
-
-  h1, h2 {
-      font-size: 56px;
-  }
-
-  p {
-      font-size: 14px;
-  }
-
-  #navbar {
-      margin-right: 2.5cm;
-  }
-
-  #wistia-container {
-      max-width: 100%;
-  }
-}
