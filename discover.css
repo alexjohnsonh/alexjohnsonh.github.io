@@ -74,7 +74,7 @@ h1, h2 {
 
 p {
     color: #000000;
-    font-size: 18px;
+    font-size: 13px;
     line-height: 1.5;
     font-family: Body;
 }
@@ -101,6 +101,6 @@ h2 {
 }
 
 wistia-player {
-    width: 100%;
+    width: 90%;
     display: block;
 }
