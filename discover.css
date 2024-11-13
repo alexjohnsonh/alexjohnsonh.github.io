@@ -15,7 +15,7 @@ body {
   #left-section {
     flex: 1;
     padding: 80px;
-    max-width: 50%;
+    max-width: 80%;
     box-sizing: border-box;
     overflow-y: auto;
     display: flex;
@@ -76,7 +76,7 @@ body {
   
   p {
     color: #000000;
-    font-size: 18px;
+    font-size: 13px;
     line-height: 1.5;
     font-family: Body;
   }
