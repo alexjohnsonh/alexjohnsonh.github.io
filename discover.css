@@ -121,11 +121,11 @@ body {
   /* For large screens, like a 24-inch iMac */
   @media (min-width: 1920px) {
     p {
-        font-size: 20px;
+        font-size: 16px;
     }
   
     #wistia-container {
-        max-width: 90%;
+        max-width: 100%;
     }
   }
   
