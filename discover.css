@@ -14,7 +14,7 @@ body {
 #left-section {
     flex: 1;
     padding: 80px;
-    max-width: 91%;
+    max-width: 85%;
     box-sizing: border-box;
     overflow-y: auto;
     display: flex;
