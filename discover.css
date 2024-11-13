@@ -1,0 +1,106 @@
+body {
+    margin: 0;
+    background-color: #ffffff;
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#container {
+    display: flex;
+    height: 100%;
+}
+
+#left-section {
+    flex: 1;
+    padding: 80px;
+    max-width: 91%;
+    box-sizing: border-box;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+#header {
+    display: flex;
+    align-items: flex-start;
+    position: sticky;
+    top: 0;
+    background-color: #ffffff;
+    z-index: 1;
+}
+
+#navbar {
+    flex-shrink: 0;
+    margin-right: 2cm;
+}
+
+#navbar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#navbar li {
+    margin-bottom: 10px;
+}
+
+#navbar a {
+    display: block;
+    padding: 10px;
+    background-color: #ffffff;
+    color: #000000;
+    text-decoration: none;
+    border-radius: 5px;
+    font-family: Body;
+}
+
+#navbar a:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+#main-content {
+    flex-grow: 1;
+}
+
+h1, h2 {
+    color: #000000;
+    margin: 0;
+    font-size: 48px;
+    font-family: Header;
+    margin-bottom: 20px;
+}
+
+p {
+    color: #000000;
+    font-size: 18px;
+    line-height: 1.5;
+    font-family: Body;
+}
+
+h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+@font-face {
+    font-family: Header;
+    src: url(ArbutusSlab-Regular.ttf);
+}
+
+@font-face {
+    font-family: Body;
+    src: url(Roboto-Light.ttf);
+}
+
+#wistia-container {
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+wistia-player {
+    width: 100%;
+    display: block;
+}
