@@ -14,7 +14,7 @@ body {
 #left-section {
     flex: 1;
     padding: 80px;
-    max-width: 85%;
+    max-width: 80%;
     box-sizing: border-box;
     overflow-y: auto;
     display: flex;
@@ -103,4 +103,27 @@ h2 {
 wistia-player {
     width: 100%;
     display: block;
+}
+
+@media (min-width: 1920px) {
+    #left-section {
+        padding: 60px; /* Reduce padding for large screens */
+        max-width: 75%; /* Adjust width for better fit */
+    }
+
+    h1, h2 {
+        font-size: 56px; /* Increase font size slightly for readability */
+    }
+
+    p {
+        font-size: 14px; /* Slightly larger font for large screens */
+    }
+
+    #navbar {
+        margin-right: 2.5cm; /* Slight adjustment to navbar spacing */
+    }
+
+    #wistia-container {
+        max-width: 100%; /* Ensure video container doesn’t overflow */
+    }
 }
